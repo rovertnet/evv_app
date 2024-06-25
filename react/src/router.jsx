@@ -4,15 +4,22 @@ import Surveys from "./views/Surveys";
 import Login from "./views/Login";
 import Signup from "./views/Signup";
 import GeustLeyaouts from "./component/GeustLeyaouts";
+import DefaultLeyaouts from "./component/DefaultLeyaouts";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Dashboard />,
-  },
-  {
-    path: "/surveys",
-    element: <Surveys />,
+    element: <DefaultLeyaouts />,
+    children: [
+      {
+        path: "/",
+        element: <Dashboard />,
+      },
+      {
+        path: "/surveys",
+        element: <Surveys />,
+      },
+    ],
   },
   {
     path: "/",
