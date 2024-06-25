@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     element: <DefaultLeyaouts />,
     children: [
       {
-        path: "/",
+        path: "/dashboard",
         element: <Dashboard />,
       },
       {
