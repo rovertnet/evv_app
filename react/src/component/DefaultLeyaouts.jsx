@@ -44,11 +44,7 @@ export default function DefaultLeyaouts() {
                 <div className="flex h-16 items-center justify-between">
                   <div className="flex items-center">
                     <div className="flex-shrink-0">
-                      <img
-                        className="h-8 w-8"
-                        src=""
-                        alt="Your Company"
-                      />
+                      <img className="h-8 w-8" src="" alt="Your Company" />
                     </div>
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-baseline space-x-4">
@@ -201,19 +197,8 @@ export default function DefaultLeyaouts() {
           )}
         </Disclosure>
 
-        <header className="bg-white shadow">
-          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900">
-              Tableau de Bord
-            </h1>
-          </div>
-        </header>
-        <main>
-          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            {/* Your content */}
-            <Outlet />
-          </div>
-        </main>
+        <Outlet />
+        
       </div>
     </>
   );
