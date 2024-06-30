@@ -4,7 +4,8 @@ import {
   DisclosureButton,
   DisclosurePanel,
   Menu,
-  MenuItem
+  MenuItem,
+  MenuItems
 } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Outlet } from "react-router-dom";
@@ -45,7 +46,7 @@ export default function DefaultLeyaouts() {
                     <div className="flex-shrink-0">
                       <img
                         className="h-8 w-8"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                        src=""
                         alt="Your Company"
                       />
                     </div>
@@ -83,7 +84,7 @@ export default function DefaultLeyaouts() {
                       {/* Profile dropdown */}
                       <Menu as="div" className="relative ml-3">
                         <div>
-                          <Menu.button className="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                          <button className="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                             <span className="absolute -inset-1.5" />
                             <span className="sr-only">Open user menu</span>
                             <img
@@ -91,9 +92,9 @@ export default function DefaultLeyaouts() {
                               src={user.imageUrl}
                               alt=""
                             />
-                          </Menu.button>
+                          </button>
                         </div>
-                        <Menu.item
+                        <MenuItems
                           transition
                           className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
                         >
@@ -112,7 +113,7 @@ export default function DefaultLeyaouts() {
                               )}
                             </MenuItem>
                           ))}
-                        </Menu.item>
+                        </MenuItems>
                       </Menu>
                     </div>
                   </div>
