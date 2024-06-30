@@ -9,12 +9,12 @@ import DefaultLeyaouts from "./component/DefaultLeyaouts";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navigate to="/dashboard" />,
-  },
-  {
-    path: "/",
     element: <DefaultLeyaouts />,
     children: [
+      {
+        path: "/dashboard",
+        element: <Navigate to="/" />,
+      },
       {
         path: "/",
         element: <Dashboard />,
