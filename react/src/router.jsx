@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 import Dashboard from "./views/Dashboard";
 import Surveys from "./views/Surveys";
 import Login from "./views/Login";
@@ -7,6 +7,10 @@ import GeustLeyaouts from "./component/GeustLeyaouts";
 import DefaultLeyaouts from "./component/DefaultLeyaouts";
 
 const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Navigate to="/dashboard" />,
+  },
   {
     path: "/",
     element: <DefaultLeyaouts />,
