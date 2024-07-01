@@ -96,7 +96,7 @@ export default function DefaultLeyaouts() {
                           <button className="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                             <span className="absolute -inset-1.5" />
                             <span className="sr-only">Open user menu</span>
-                            <UserIcon className="w-8 text-slate-200" />
+                            <UserIcon className="w-8 h-8 bg-black/25 p-2 rounded-full text-slate-200" />
                           </button>
                         </div>
                         <MenuItems
@@ -122,7 +122,7 @@ export default function DefaultLeyaouts() {
                     {/* Mobile menu button */}
                     <DisclosureButton className="relative inline-flex items-center justify-center rounded-md bg-gray-600 p-2 text-white hover:bg-gray-400 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="absolute -inset-0.5" />
-                      <span className="sr-only">Open main menu</span>
+                      <span className="sr-only">afficher menu</span>
                       {open ? (
                         <XMarkIcon
                           className="block h-6 w-6"
@@ -161,7 +161,7 @@ export default function DefaultLeyaouts() {
                 <div className="border-t border-gray-700 pb-3 pt-4">
                   <div className="flex items-center px-5">
                     <div className="flex-shrink-0">
-                      <UserIcon className="w-8 text-slate-700" />
+                      <UserIcon className="w-8 h-8 bg-black/25 p-2 rounded-full text-slate-700" />
                     </div>
                     <div className="ml-3">
                       <div className="text-base font-medium leading-none text-white">
