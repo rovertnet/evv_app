@@ -14,7 +14,7 @@ export const ContextProvider = ({children}) => {
     email: "tom@example.com",
     imageUrl: "../../public/robert.png",
   });
-  const [userToken, setUserToken] = useState('1234')
+  const [userToken, setUserToken] = useState('')
 
   return (
     <>
@@ -30,4 +30,4 @@ export const ContextProvider = ({children}) => {
   )
 }
 
-export const userStateContext = () => useContext(StateContext)
+export const useContextState = () => useContext(StateContext)

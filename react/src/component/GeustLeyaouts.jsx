@@ -1,9 +1,10 @@
-import { useState } from "react";
+
 import { Navigate, Outlet } from "react-router-dom";
+import { useStateContext } from "../context/ContextProvider";
 
 export default function GeustLeyaouts() {
 
-  const [userToken, setUserToken] = useState();
+  const { userToken } = useStateContext();
   if (userToken) {
     return <Navigate to={'/'} />
   }
