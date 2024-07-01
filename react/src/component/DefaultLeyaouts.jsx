@@ -63,8 +63,8 @@ export default function DefaultLeyaouts() {
                               classNames(
                                 isActive
                                   ? "border-b-4 border-slate-900 text-slate-700"
-                                  : "text-gray-800 hover:bg-gray-400 hover:text-white",
-                                "px-3 py-2 text-sm font-medium"
+                                  : "text-gray-800 hover:bg-slate-900 hover:text-white",
+                                "px-3 py-2 text-lg font-bold"
                               )
                             }
                           >
@@ -124,7 +124,7 @@ export default function DefaultLeyaouts() {
                   </div>
                   <div className="-mr-2 flex md:hidden">
                     {/* Mobile menu button */}
-                    <DisclosureButton className="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                    <DisclosureButton className="relative inline-flex items-center justify-center rounded-md bg-gray-600 p-2 text-white hover:bg-gray-400 hover:text-slate-900 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="absolute -inset-0.5" />
                       <span className="sr-only">Open main menu</span>
                       {open ? (
@@ -147,13 +147,13 @@ export default function DefaultLeyaouts() {
                 <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
                   {navigation.map((item) => (
                     <NavLink
-                      key={item.nto}
+                      key={item.name}
                       to={item.to}
                       className={({ isActive }) =>
                         classNames(
                           isActive
-                            ? "bg-gray-900 text-white"
-                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                            ? "bg-gray-600 text-white"
+                            : "text-gray-300 hover:bg-gray-400 hover:text-slate-900",
                           "block rounded-md px-3 py-2 text-base font-medium"
                         )
                       }
@@ -184,7 +184,7 @@ export default function DefaultLeyaouts() {
                       className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                     >
                       <span className="absolute -inset-1.5" />
-                      <span className="sr-only">View notifications</span>
+                      <span className="sr-only">Affichez les notifications</span>
                       <BellIcon className="h-6 w-6" aria-hidden="true" />
                     </button>
                   </div>
