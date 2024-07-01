@@ -48,7 +48,7 @@ export default function DefaultLeyaouts() {
                   <div className="flex items-center">
                     <div className="flex-shrink-0">
                       <img
-                        className="h-12 w-12"
+                        className="h-16 w-16"
                         src="../../public/logocrevv.png"
                         alt="Your Company"
                       />
