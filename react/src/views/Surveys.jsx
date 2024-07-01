@@ -5,7 +5,7 @@ export default function Surveys() {
   return (
     <>
       <PageComponent title={"Surveys"}>
-        children
+        Surveys content
       </PageComponent>
     </>
   );

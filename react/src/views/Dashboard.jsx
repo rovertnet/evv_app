@@ -5,7 +5,7 @@ export default function Dashboard() {
   return (
     <>
       <PageComponent title={"Dashboard"}>
-        children
+        Dashboard content
       </PageComponent>
     </>
   );
