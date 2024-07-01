@@ -161,7 +161,7 @@ export default function DefaultLeyaouts() {
                 <div className="border-t border-gray-700 pb-3 pt-4">
                   <div className="flex items-center px-5">
                     <div className="flex-shrink-0">
-                      <UserIcon className="w-8 text-slate-200" />
+                      <UserIcon className="w-8 text-slate-700" />
                     </div>
                     <div className="ml-3">
                       <div className="text-base font-medium leading-none text-white">
