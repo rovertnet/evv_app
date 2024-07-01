@@ -9,13 +9,13 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink, Outlet } from "react-router-dom";
+import { userStateContext } from "../context/ContextProvider";
+import { FaUserAlt } from "react-icons/fa";
 
-const user = {
-  name: "Tom Cook",
-  email: "tom@example.com",
-  imageUrl:
-    "../../public/robert.png",
-};
+
+// const user = {
+//   
+// };
 const navigation = [
   { name: "Tableau de bord", to: "/"},
   { name: "Sondages", to: "/surveys" },
@@ -31,6 +31,12 @@ function classNames(...classes) {
 }
 
 export default function DefaultLeyaouts() {
+
+  const { currentUser } = userStateContext({
+    name: "Tom Cook",
+    email: "tom@example.com",
+    imageUrl: "../../public/robert.png",
+  });
 
   const logout = (ev) => {
     ev.preventDefault();
@@ -91,27 +97,24 @@ export default function DefaultLeyaouts() {
                           <button className="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                             <span className="absolute -inset-1.5" />
                             <span className="sr-only">Open user menu</span>
-                            <img
-                              className="h-8 w-8 rounded-full"
-                              src={user.imageUrl}
-                              alt=""
-                            />
+                            <FaUserAlt size={20} />
                           </button>
                         </div>
                         <MenuItems
                           transition
                           className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
                         >
-                            <MenuItem>
-                                <a
-                                  href="#"
-                                  onClick={(ev) => logout(ev)}
-                                  className={
-                                    "block px-4 py-2 text-sm text-gray-700"}
-                                >
-                                  Déconnexion
-                                </a>
-                            </MenuItem>
+                          <MenuItem>
+                            <a
+                              href="#"
+                              onClick={(ev) => logout(ev)}
+                              className={
+                                "block px-4 py-2 text-sm text-gray-700"
+                              }
+                            >
+                              Déconnexion
+                            </a>
+                          </MenuItem>
                         </MenuItems>
                       </Menu>
                     </div>
@@ -159,18 +162,14 @@ export default function DefaultLeyaouts() {
                 <div className="border-t border-gray-700 pb-3 pt-4">
                   <div className="flex items-center px-5">
                     <div className="flex-shrink-0">
-                      <img
-                        className="h-10 w-10 rounded-full"
-                        src={user.imageUrl}
-                        alt=""
-                      />
+                      <FaUserAlt size={20} />
                     </div>
                     <div className="ml-3">
                       <div className="text-base font-medium leading-none text-white">
-                        {user.name}
+                        {currentUser.name}
                       </div>
                       <div className="text-sm font-medium leading-none text-gray-400">
-                        {user.email}
+                        {currentUser.email}
                       </div>
                     </div>
                     <button
@@ -178,7 +177,9 @@ export default function DefaultLeyaouts() {
                       className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                     >
                       <span className="absolute -inset-1.5" />
-                      <span className="sr-only">Affichez les notifications</span>
+                      <span className="sr-only">
+                        Affichez les notifications
+                      </span>
                       <BellIcon className="h-6 w-6" aria-hidden="true" />
                     </button>
                   </div>
