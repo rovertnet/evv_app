@@ -7,10 +7,9 @@ import {
   MenuItem,
   MenuItems
 } from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, BellIcon, UserIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink, Outlet } from "react-router-dom";
 import { userStateContext } from "../context/ContextProvider";
-import { FaUserAlt } from "react-icons/fa";
 
 
 // const user = {
@@ -97,7 +96,7 @@ export default function DefaultLeyaouts() {
                           <button className="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                             <span className="absolute -inset-1.5" />
                             <span className="sr-only">Open user menu</span>
-                            <FaUserAlt size={20} />
+                            <UserIcon className="w-8 text-slate-200" />
                           </button>
                         </div>
                         <MenuItems
@@ -150,7 +149,7 @@ export default function DefaultLeyaouts() {
                         classNames(
                           isActive
                             ? "bg-gray-600 text-white"
-                            : "text-gray-300 hover:bg-gray-400 hover:text-slate-900",
+                            : "text-gray-800 hover:bg-gray-400 hover:text-slate-900",
                           "block rounded-md px-3 py-2 text-base font-medium"
                         )
                       }
@@ -162,7 +161,7 @@ export default function DefaultLeyaouts() {
                 <div className="border-t border-gray-700 pb-3 pt-4">
                   <div className="flex items-center px-5">
                     <div className="flex-shrink-0">
-                      <FaUserAlt size={20} />
+                      <UserIcon className="w-8 text-slate-200" />
                     </div>
                     <div className="ml-3">
                       <div className="text-base font-medium leading-none text-white">
