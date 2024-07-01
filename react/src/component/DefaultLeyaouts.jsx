@@ -62,7 +62,7 @@ export default function DefaultLeyaouts() {
                             className={({ isActive }) =>
                               classNames(
                                 isActive
-                                  ? "border-b-4 border-slate-900 text-slate-700"
+                                  ? "border-b-4 border border-slate-900 text-slate-700"
                                   : "text-gray-800 hover:bg-slate-900 hover:text-white",
                                 "px-3 py-2 text-lg font-bold"
                               )
@@ -102,22 +102,16 @@ export default function DefaultLeyaouts() {
                           transition
                           className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
                         >
-                          {userNavigation.map((item) => (
-                            <MenuItem key={item.name}>
-                              {({ focus }) => (
+                            <MenuItem>
                                 <a
                                   href="#"
                                   onClick={(ev) => logout(ev)}
-                                  className={classNames(
-                                    focus ? "bg-gray-100" : "",
-                                    "block px-4 py-2 text-sm text-gray-700"
-                                  )}
+                                  className={
+                                    "block px-4 py-2 text-sm text-gray-700"}
                                 >
-                                  {item.name}
+                                  Déconnexion
                                 </a>
-                              )}
                             </MenuItem>
-                          ))}
                         </MenuItems>
                       </Menu>
                     </div>
