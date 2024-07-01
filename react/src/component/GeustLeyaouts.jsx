@@ -1,6 +1,13 @@
-import { Outlet } from "react-router-dom";
+import { useState } from "react";
+import { Navigate, Outlet } from "react-router-dom";
 
 export default function GeustLeyaouts() {
+
+  const [userToken, setUserToken] = useState();
+  if (userToken) {
+    return <Navigate to={'/'} />
+  }
+
   return (
     <>
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 lg:px-8">
