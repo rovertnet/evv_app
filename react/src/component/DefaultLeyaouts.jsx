@@ -67,9 +67,9 @@ export default function DefaultLeyaouts() {
                             className={({ isActive }) =>
                               classNames(
                                 isActive
-                                  ? "border-b-4 hover:border border-slate-900 text-slate-700"
+                                  ? "border-b-4 hover:border border-gray-800 text-slate-700"
                                   : "text-gray-800 hover:bg-slate-900 hover:text-white",
-                                "px-3 py-2 text-lg font-bold"
+                                "px-3 py-4 text-lg font-bold"
                               )
                             }
                           >
