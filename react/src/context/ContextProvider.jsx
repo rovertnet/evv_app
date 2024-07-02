@@ -182,7 +182,7 @@ export const ContextProvider = ({children}) => {
     email: "tom@example.com",
     imageUrl: "../../public/robert.png",
   });
-  const [userToken, setUserToken] = useState('')
+  const [userToken, setUserToken] = useState('12345')
   const [surveys, setSurveys] = useState(tmpSurveys)
 
   return (
