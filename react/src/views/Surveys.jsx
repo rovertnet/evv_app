@@ -11,8 +11,8 @@ export default function Surveys() {
   return (
     <>
       <PageComponent title={"Sondages"}>
-        <div className="flex flex-col py-4 px-6 shadow-md bg-white hover:bg-gray-50 h-[470px]">
-          {surveys.map(survey => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 py-4 px-6 shadow-md bg-white hover:bg-gray-50 h-[470px]">
+          {surveys.map((survey) => (
             <SurveyListItems survey={survey} key={survey.id} />
           ))}
         </div>
