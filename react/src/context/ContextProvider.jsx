@@ -15,6 +15,7 @@ export const ContextProvider = ({children}) => {
     imageUrl: "../../public/robert.png",
   });
   const [userToken, setUserToken] = useState('')
+  const [surveys, setSurveys] = useState()
 
   return (
     <>
@@ -22,7 +23,8 @@ export const ContextProvider = ({children}) => {
         currentUser,
         setCurrentUser,
         userToken,
-        setUserToken
+        setUserToken,
+        surveys
       }}>
         {children}
       </StateContext.Provider>
