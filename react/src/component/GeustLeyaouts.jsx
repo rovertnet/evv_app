@@ -5,7 +5,7 @@ import { useStateContext } from "../context/ContextProvider";
 export default function GeustLeyaouts() {
 
   const { userToken } = useStateContext();
-  
+
   if (userToken) {
     return <Navigate to={'/'} />
   }
