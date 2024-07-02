@@ -12,7 +12,7 @@ export default function Surveys() {
     <>
       <PageComponent title={"Sondages"}>
         {surveys.map(survey =>(
-          <SurveysList  />
+          <SurveysList survey={survey} key={survey.id} />
         ))}
       </PageComponent>
     </>
