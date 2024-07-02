@@ -11,9 +11,11 @@ export default function Surveys() {
   return (
     <>
       <PageComponent title={"Sondages"}>
-        {surveys.map(survey =>(
-          <SurveysList survey={survey} key={survey.id} />
-        ))}
+        <div className="flex flex-col py-4 px-6 shadow-md bg-white hover:bg-gray-50 h-[470px]">
+          {surveys.map((survey) => (
+            <SurveysList survey={survey} key={survey.id} />
+          ))}
+        </div>
       </PageComponent>
     </>
   );
