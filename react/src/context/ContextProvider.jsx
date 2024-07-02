@@ -7,6 +7,10 @@ const StateContext = createContext({
   setUserToken: () => {} 
 });
 
+const tmpSurveys = [
+
+]
+
 export const ContextProvider = ({children}) => {
 
   const [currentUser, setCurrentUser] = useState({
@@ -15,7 +19,7 @@ export const ContextProvider = ({children}) => {
     imageUrl: "../../public/robert.png",
   });
   const [userToken, setUserToken] = useState('')
-  const [surveys, setSurveys] = useState()
+  const [surveys, setSurveys] = useState(tmpSurveys)
 
   return (
     <>
