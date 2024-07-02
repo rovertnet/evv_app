@@ -9,7 +9,7 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, BellIcon, UserIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink, Navigate, Outlet } from "react-router-dom";
-import { useStateContext } from "../context/ContextProvider";
+import { userStateContext } from "../context/ContextProvider";
 
 
 // const user = {
@@ -31,7 +31,7 @@ function classNames(...classes) {
 
 export default function DefaultLeyaouts() {
 
-  const { currentUser, userToken } = useStateContext({});
+  const { currentUser, userToken } = userStateContext({});
 
   if (!userToken) {
     return <Navigate to={"login"} />;

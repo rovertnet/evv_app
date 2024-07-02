@@ -32,4 +32,4 @@ export const ContextProvider = ({children}) => {
   )
 }
 
-export const useContextState = () => useContext(StateContext)
+export const userContextState = () => useContext(StateContext)
