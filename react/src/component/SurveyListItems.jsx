@@ -1,6 +1,6 @@
 
 
-export default function SurveyListItems({survey, onClick}) {
+export default function SurveyListItems({survey, onDeleteClick}) {
   return (
     <>
       <div className="flex flex-col py-4 px-6 shadow-md bg-white hover:bg-gray-50 h-[470px]">
@@ -27,7 +27,7 @@ export default function SurveyListItems({survey, onClick}) {
 
             {survey.id && (
               <TButton
-                onClick={onClick}
+                onClick={onDeleteClick}
                 circle
                 link
                 color="red"

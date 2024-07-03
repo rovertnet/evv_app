@@ -8,7 +8,7 @@ export default function Surveys() {
   const { surveys } = useStateContext();
   console.log(surveys);
 
-  const onClick = () => {
+  const onDeleteClick = () => {
     console.log("Clique sur supprimer");
   }
 
@@ -17,7 +17,7 @@ export default function Surveys() {
       <PageComponent title={"Sondages"}>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
           {surveys.map((survey) => (
-            <SurveyListItems survey={survey} key={survey.id} onClick={onClick} />
+            <SurveyListItems survey={survey} key={survey.id} onDeleteClick={onDeleteClick} />
           ))}
         </div>
       </PageComponent>
