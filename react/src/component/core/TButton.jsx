@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from "react-router-dom";
 
 export default function TButton(
   color = "indigo",
@@ -9,7 +9,6 @@ export default function TButton(
   target = "_blank",
   children
 ) {
-
   let classes = [
     "flex",
     "items-center",
@@ -61,9 +60,37 @@ export default function TButton(
     }
   }
 
-  return( 
-    <>
+  if (circle) {
+    classes = [
+      ...classes,
+      "h-8",
+      "w-8",
+      "items-center",
+      "justify-center",
+      "rounded-full",
+      "text-sm",
+    ];
+  } else {
+    classes = [...classes, "p-0", "py-2", "px-4", "rounded-md"];
+  }
 
+  return (
+    <>
+      {href && (
+        <a href={href} className={classes.join(" ")} target={target}>
+          {children}
+        </a>
+      )}
+      {to && (
+        <Link to={to} className={classes.join(" ")}>
+          {children}
+        </Link>
+      )}
+      {!to && !href && (
+        <button onClick={onClick} className={classes.join(" ")}>
+          {children}
+        </button>
+      )}
     </>
   );
 }
