@@ -87,7 +87,7 @@ export default function TButton(
         </Link>
       )}
       {!to && !href && (
-        <button onClick={onClick} className={classes.join(" ")}>
+        <button className={classes.join(" ")}>
           {children}
         </button>
       )}

@@ -1,4 +1,9 @@
-
+import TButton from "./core/TButton";
+import {
+  ArrowTopRightOnSquareIcon,
+  PencilIcon,
+  TrashIcon,
+} from "@heroicons/react/24/outline";
 
 export default function SurveyListItems({survey, onDeleteClick}) {
   return (
